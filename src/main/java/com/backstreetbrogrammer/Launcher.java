@@ -14,10 +14,12 @@ import java.util.Objects;
 public class Launcher extends Application {
     @Override
     public void start(final Stage stage) throws Exception {
-        final URL resource = getClass().getClassLoader().getResource("first.fxml");
+//        final URL resource = getClass().getClassLoader().getResource("LoginWindow.fxml");
+        final URL resource = getClass().getClassLoader().getResource("MainWindow.fxml");
+
         final Parent parent = FXMLLoader.load(Objects.requireNonNull(resource));
 
-        final Scene scene = new Scene(parent, 300, 250);
+        final Scene scene = new Scene(parent, 950, 800);
         stage.setScene(scene);
         stage.show();
     }

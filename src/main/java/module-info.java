@@ -5,5 +5,5 @@ module EmailClient {
     requires javafx.web;
 
     opens com.backstreetbrogrammer;
-    opens com.backstreetbrogrammer.view;
+    opens com.backstreetbrogrammer.controller;
 }
