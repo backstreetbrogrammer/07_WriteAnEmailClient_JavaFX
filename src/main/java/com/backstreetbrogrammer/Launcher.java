@@ -1,5 +1,6 @@
 package com.backstreetbrogrammer;
 
+import com.backstreetbrogrammer.view.ViewFactory;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,6 +15,11 @@ import java.util.Objects;
 public class Launcher extends Application {
     @Override
     public void start(final Stage stage) throws Exception {
+        final ViewFactory viewFactory = new ViewFactory(new EmailManager());
+        viewFactory.showLoginWindow();
+    }
+
+    public void startWithFxml(final Stage stage) throws Exception {
 //        final URL resource = getClass().getClassLoader().getResource("LoginWindow.fxml");
         final URL resource = getClass().getClassLoader().getResource("MainWindow.fxml");
 
